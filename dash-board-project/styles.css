@@ -136,4 +136,177 @@ header::before{
     flex-direction: column;
     align-items: center;
     padding: 3.4rem 0 2rem 0;
+    border-top-width: 0.3rem;
+    border-top-style: solid;
+    border-color:var(--border-color);
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.container .dashboard-body .instagram {
+    border-style: none;
+}
+
+.container .dashboard-body .instagram::before {
+    content: "";
+    position: absolute;
+    background: var(--clr-instagram);
+    top: -0.3rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 0.5rem;
+    z-index: -1;
+
+}
+.container .dashboard-body .box:first-child {
+    margin-top: -5.2rem;
+}
+
+.container .dashboard-body .box:not(:first-child){
+    margin-top:2.5rem;
+}
+
+.container .dashboard-body .box .box-top {
+
+}
+.container .dashboard-body .box .box-top {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+.container .dashboard-body .box .box-top span {
+    font-weight: var (--fw-bold);
+    font-size: 1.2rem;
+    /*colo r: red;*/
+}
+.container .dashboard-body .box h2{
+    margin-top: 2.3rem;
+    font-size: 5rem;
+    color: var(--clr-text-bold-color);
+    /*color: red;*/
+
+}
+.container .dashboard-body .box p {
+   letter-spacing: 0.6rem;
+
+}
+
+.container .dashboard-body .box .box-botton {
+    margin-top: 2.4rem;
+    display: flex;
+    align-items: center;
+}
+.container .dashboard-body .box .box-botton span {
+    font-weight: var(--fw-bold);
+   
+}
+
+.overviews {
+    padding: 4.2rem 0 0 0;
+}
+.overviews .overview-title {
+    margin-bottom: 3rem;
+}
+.overviews .overview-title h3 {
+    font-size: 2.4rem;
+    color: var(--clr-text-bold-color);
+}
+
+.overviews .overview-box {
+    background-color: var(--clr-card-bg);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2.4rem 2.6rem;
+    margin-bottom: 1.5rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.overviews .overview-box .top,
+.overviews .overview-box .botton {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.overviews .overview-box .botton h5 {
+    font-size: 3rem;
+    color: var(--clr-text-bold-color);
+}
+
+.overviews .overview-box .botton div {
+    display: flex;
+    align-items: center;
+}
+
+.overviews .overview-box .botton div span {
+    font-weight: var(--fw-bold);
+}
+
+.container .dashboard-body .box:hover,
+.overviews .overview-box:hover{
+    background-color: var(--clr-hover);
+}
+
+@media(min-width: 768px){
+    section::before{
+    height: 20%;
+}
+hr {
+    display: none;
+}
+.container .dashboard-header {
+display: flex;
+align-items: flex-start;
+justify-content: space-between;
+}
+.container .dashboard-body{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+}
+.container .dashboard-body .box {
+    width: calc(50% -2 rem);
+
+}
+.container .dashboard-body .box:not(:first-child),
+.container .dashboard-body .box:first-child{
+    margin-top: 0;
+}
+
+.overviews .overview-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.overviews .overview-container .overview-box {
+    width:calc(50% - 2rem);
+    margin-bottom: 0;
+}
+}
+
+@media (min-width: 1200px) {
+    section::before {
+        height:30%;
+}
+
+.container .dashboard-body h1{
+    font-size: 2.8rem;
+    }
+.container .dashboard-body{
+    margin-top: -11rem;
+}
+
+.container .dashboard-body .box,
+.overviews .overview-container .overview-box {
+    width: calc(25% - 2rem);
+}
 }
